@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capcha</title>
+    <script src="
+https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/lib/index.min.js
+"></script>
+    <link href="
+https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
+" rel="stylesheet">
+
+</head>
+
+<body class="text-center mt-20">
+    <h1 class="text-lg">EqFtz</h1>
+    <section class="mt-5">
+        <input type="text" class="border p-2">
+        <button class="bg-green-500 text-white px-3 py-2 rounded-md">Verify</button>
+    </section>
+
+    <script>
+        let capcha = document.querySelector("h1").textContent
+        let verify = document.querySelector("button")
+
+        verify.addEventListener("click", function () {
+            let input = document.querySelector("input").value
+            if (input === capcha) {
+                alert("Capcha verification SUCCESSFUL")
+            }
+            else {
+                alert("Capcha verification FAILED, TRY AGAIN")
+            }
+        })
+    </script>
+</body>
+
+</html>
